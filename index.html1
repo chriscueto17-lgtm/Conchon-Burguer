@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conchon Burguer</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #00b4d8;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        .contenedor {
+            background-color: white;
+            color: #333;
+            width: 500px;
+            max-width: 90%;
+            margin: 60px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .contenedor h2 {
+            color: #0077b6;
+        }
+
+        .contenedor p {
+            font-size: 18px;
+        }
+
+        /* BOTÓN PRINCIPAL */
+
+        button {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0077b6;
+            transform: scale(1.03);
+        }
+
+        /* INFORMACIÓN */
+
+        #info {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #eafaff;
+            border-radius: 15px;
+        }
+
+        #info h3 {
+            color: #0077b6;
+            font-size: 25px;
+        }
+
+        /* PRODUCTOS */
+
+        .producto {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .producto h4 {
+            color: #0077b6;
+            font-size: 22px;
+            margin: 5px;
+        }
+
+        .precio {
+            color: #e63946;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* DETALLES */
+
+        .detalles {
+            display: none;
+            background-color: #f1faff;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .detalles p {
+            font-size: 16px;
+        }
+
+        /* BOTÓN PEDIR */
+
+        .pedir {
+            background-color: #28a745;
+        }
+
+        .pedir:hover {
+            background-color: #218838;
+        }
+
+        /* PROMOCIÓN */
+
+        .promo {
+            background-color: #fff3cd;
+            color: #333;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .promo h4 {
+            color: #e67e22;
+            font-size: 21px;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h1>El futuro de Conchon Burguer 🍔</h1>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <div class="contenedor">
+
+        <h2>¡Bienvenido Conchon! 👋</h2>
+
+        <p>
+            Si deseas más información,
+            presiona el botón de abajo.
+        </p>
+
+
+        <!-- BOTÓN PRINCIPAL -->
+
+        <button onclick="mostrarInfo()">
+            Haz clic aquí
+        </button>
+
+
+        <!-- INFORMACIÓN OCULTA -->
+
+        <div id="info">
+
+            <h3>🍔 CONCHON BURGUER</h3>
+
+            <p>
+                Bienvenido a nuestra página.
+            </p>
+
+            <p>
+                Tenemos hamburguesas, combos,
+                papas, bebidas y promociones.
+            </p>
+
+
+            <!-- ========================= -->
+            <!-- HAMBURGUESAS -->
+            <!-- ========================= -->
+
+            <h3>🍔 Hamburguesas</h3>
+
+
+            <!-- CONCHON DOBLE -->
+
+            <div class="producto">
+
+                <h4>🍔 Conchon Doble</h4>
+
+                <p>
+                    Nuestra clásica hamburguesa
+                    con doble carne.
+                </p>
+
+                <p class="precio">
+                    S/ 15.00
+                </p>
+
+                <button onclick="mostrarProducto('doble')">
+                    Ver información
+                </button>
+
+
+                <div id="doble" class="detalles">
+
+                    <p>
+                        🥩 Doble carne de hamburguesa
+                    </p>
+
+                    <p>
+                        🧀 Queso
+                    </p>
+
+                    <p>
+                        🥬 Lechuga
+                    </p>
+
+                    <p>
+                        🍅 Tomate
+                    </p>
+
+                    <p>
+                        🥫 Salsas especiales
+                    </p>
+
+                    <button class="pedir" onclick="pedir('Conchon Doble')">
+                        🛒 Pedir
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONCHON COMBO -->
+
+            <div class="producto">
+
+                <h4>🍔 Conchon Combo</h4>
+
+                <p>
+                    Hamburguesa + papas + bebida.
+                </p>
+
+                <p class="precio">
+                    S/ 20.00
+                </p>
+
+                <button onclick="mostrarProducto('combo')">
+                    Ver información
+                </button>
+
+
+                <div id="combo" class="detalles">
+
+                    <p>
+                        🍔 Hamburguesa Conchon
+                    </p>
+
+                    <p>
+                        🍟 Papas fritas
+                    </p>
+
+                    <p>
+                        🥤 Bebida
+                    </p>
+
+                    <p>
+                        🥫 Salsas especiales
+                    </p>
+
+                    <button class="pedir" onclick="pedir('Conchon Combo')">
+                        🛒 Pedir
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUPER CONCHON -->
+
+            <div class="producto">
+
+                <h4>🔥 La Súper Conchon</h4>
+
+                <p>
+                    La hamburguesa especial de la casa.
+                </p>
+
+                <p class="precio">
+                    S/ 25.00
+                </p>
+
+                <button onclick="mostrarProducto('super')">
+                    Ver información
+                </button>
+
+
+                <div id="super" class="detalles">
+
+                    <p>
+                        🥩 Carne especial
+                    </p>
+
+                    <p>
+                        🧀 Doble queso
+                    </p>
+
+                    <p>
+                        🥓 Tocino
+                    </p>
+
+                    <p>
+                        🥬 Lechuga
+                    </p>
+
+                    <p>
+                        🍅 Tomate
+                    </p>
+
+                    <p>
+                        🥫 Salsa especial Conchon
+                    </p>
+
+                    <button class="pedir" onclick="pedir('La Súper Conchon')">
+                        🛒 Pedir
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- PAPAS -->
+            <!-- ========================= -->
+
+            <h3>🍟 Papas fritas</h3>
+
+            <div class="producto">
+
+                <h4>🍟 Papas Conchon</h4>
+
+                <p>
+                    Papas fritas crujientes.
+                </p>
+
+                <p class="precio">
+                    S/ 8.00
+                </p>
+
+                <button class="pedir" onclick="pedir('Papas Conchon')">
+                    🛒 Pedir
+                </button>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- BEBIDAS -->
+            <!-- ========================= -->
+
+            <h3>🥤 Bebidas</h3>
+
+            <div class="producto">
+
+                <h4>🥤 Gaseosa</h4>
+
+                <p>
+                    Gaseosa fría.
+                </p>
+
+                <p class="precio">
+                    S/ 5.00
+                </p>
+
+                <button class="pedir" onclick="pedir('Gaseosa')">
+                    🛒 Pedir
+                </button>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- PROMOCIONES -->
+            <!-- ========================= -->
+
+            <h3>🔥 Promociones</h3>
+
+            <div class="promo">
+
+                <h4>
+                    🔥 Promo Conchon
+                </h4>
+
+                <p>
+                    Conchon Doble + Papas + Gaseosa
+                </p>
+
+                <p class="precio">
+                    S/ 22.00
+                </p>
+
+                <button class="pedir" onclick="pedir('Promo Conchon')">
+                    🛒 Pedir promoción
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        Siempre contigo Conchon © 2026
+
+    </footer>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+        /* Mostrar información principal */
+
+        function mostrarInfo() {
+
+            let info = document.getElementById("info");
+
+            if (info.style.display === "none" ||
+                info.style.display === "") {
+
+                info.style.display = "block";
+
+            } else {
+
+                info.style.display = "none";
+
+            }
+
+        }
+
+
+        /* Mostrar detalles de cada producto */
+
+        function mostrarProducto(id) {
+
+            let producto = document.getElementById(id);
+
+            if (producto.style.display === "none" ||
+                producto.style.display === "") {
+
+                producto.style.display = "block";
+
+            } else {
+
+                producto.style.display = "none";
+
+            }
+
+        }
+
+
+        /* Botón pedir */
+
+        function pedir(nombre) {
+
+            alert(
+                "🍔 ¡Excelente elección!\n\n" +
+                "Has seleccionado: " + nombre +
+                "\n\nGracias por elegir Conchon Burguer ❤️"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
