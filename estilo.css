@@ -1,0 +1,961 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* ============================= */
+/* PANTALLA DE PRESENTACIÓN */
+/* ============================= */
+
+#presentacion {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
+.contenido {
+    position: relative;
+    z-index: 20;
+
+    width: 1100px;
+
+    text-align: center;
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo {
+    position: relative;
+
+    width: 150px;
+    height: 125px;
+
+    margin: 0 auto 10px;
+}
+
+.pan {
+    position: absolute;
+
+    width: 115px;
+    height: 55px;
+
+    top: 0;
+    left: 17px;
+
+    background: black;
+
+    border-radius: 70px 70px 18px 18px;
+}
+
+.pan::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    top: 13px;
+    left: 25px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        20px 0 white,
+        40px 0 white,
+        10px 14px white,
+        30px 14px white;
+}
+
+.carne {
+    position: absolute;
+
+    width: 115px;
+    height: 16px;
+
+    top: 58px;
+    left: 17px;
+
+    background: black;
+
+    border-radius: 8px;
+}
+
+.queso {
+    position: absolute;
+
+    width: 115px;
+    height: 10px;
+
+    top: 77px;
+    left: 17px;
+
+    background: #e4002b;
+
+    border-radius: 5px;
+}
+
+.pan-abajo {
+    position: absolute;
+
+    width: 115px;
+    height: 17px;
+
+    top: 92px;
+    left: 17px;
+
+    background: black;
+
+    border-radius: 5px 5px 18px 18px;
+}
+
+
+/* ============================= */
+/* LETRAS */
+/* ============================= */
+
+h1 {
+    font-family: "Bebas Neue", Impact, sans-serif;
+
+    font-size: 180px;
+
+    line-height: 0.88;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+}
+
+h1 span {
+    display: block;
+
+    color: black;
+}
+
+h1 b {
+    display: block;
+
+    color: #e4002b;
+}
+
+
+/* ============================= */
+/* ESTRELLAS Y LÍNEAS */
+/* ============================= */
+
+.separador {
+    width: 900px;
+
+    margin: 42px auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+}
+
+.linea-roja {
+    width: 300px;
+    height: 6px;
+
+    background: #e4002b;
+
+    flex-shrink: 0;
+}
+
+.estrellas {
+    color: black;
+
+    font-size: 52px;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================= */
+/* ESLOGAN */
+/* ============================= */
+
+.contenido p {
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 6px;
+
+    color: black;
+
+    margin-top: 0;
+}
+
+
+/* ============================= */
+/* BOTÓN */
+/* ============================= */
+
+#btnEntrar {
+    width: 360px;
+    height: 85px;
+
+    margin-top: 38px;
+
+    background: black;
+
+    color: white;
+
+    border: 6px solid #e4002b;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 8px 8px 0 #e4002b;
+
+    transition: 0.2s;
+}
+
+#btnEntrar:hover {
+    transform: translate(5px, 5px);
+
+    box-shadow: 3px 3px 0 #e4002b;
+}
+
+#btnEntrar:active {
+    transform: translate(8px, 8px);
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* CUADRADOS GRANDES */
+/* ============================= */
+
+.shape {
+    position: absolute;
+
+    z-index: 2;
+}
+
+
+/* Arriba izquierda */
+
+.shape-1 {
+    width: 520px;
+    height: 520px;
+
+    top: -350px;
+    left: -150px;
+
+    background: #050505;
+
+    transform: rotate(45deg);
+}
+
+.shape-1::after {
+    content: "";
+
+    position: absolute;
+
+    width: 315px;
+    height: 315px;
+
+    top: 100px;
+    left: 100px;
+
+    border: 5px solid #e4002b;
+}
+
+.shape-1::before {
+    content: "";
+
+    position: absolute;
+
+    width: 175px;
+    height: 175px;
+
+    top: 170px;
+    left: 170px;
+
+    background: white;
+}
+
+
+/* Arriba derecha */
+
+.shape-2 {
+    width: 420px;
+    height: 420px;
+
+    top: -235px;
+    right: -125px;
+
+    background: #e4002b;
+
+    transform: rotate(45deg);
+}
+
+.shape-2::after {
+    content: "";
+
+    position: absolute;
+
+    width: 265px;
+    height: 265px;
+
+    top: 75px;
+    left: 75px;
+
+    border: 5px solid black;
+}
+
+
+/* Abajo izquierda */
+
+.shape-3 {
+    width: 360px;
+    height: 360px;
+
+    bottom: 40px;
+    left: -220px;
+
+    background: black;
+
+    transform: rotate(45deg);
+}
+
+.shape-3::after {
+    content: "";
+
+    position: absolute;
+
+    width: 175px;
+    height: 175px;
+
+    top: 92px;
+    left: 92px;
+
+    background: #e4002b;
+}
+
+
+/* Abajo derecha */
+
+.shape-4 {
+    width: 680px;
+    height: 680px;
+
+    bottom: -300px;
+    right: -170px;
+
+    background: #050505;
+
+    transform: rotate(45deg);
+}
+
+.shape-4::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: 245px;
+    left: 245px;
+
+    background: white;
+}
+
+.shape-4::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 6px;
+
+    top: 335px;
+    left: 115px;
+
+    background: #e4002b;
+
+    transform: rotate(-45deg);
+}
+
+
+/* ============================= */
+/* CUADRITOS */
+/* ============================= */
+
+.rombo {
+    position: absolute;
+
+    z-index: 8;
+
+    transform: rotate(45deg);
+}
+
+.rombo-1 {
+    width: 45px;
+    height: 45px;
+
+    top: 17%;
+    left: 32%;
+
+    background: black;
+}
+
+.rombo-2 {
+    width: 65px;
+    height: 65px;
+
+    top: 19%;
+    right: 19%;
+
+    background: black;
+}
+
+.rombo-3 {
+    width: 60px;
+    height: 60px;
+
+    top: 39%;
+    left: 8%;
+
+    background: #e4002b;
+}
+
+.rombo-4 {
+    width: 55px;
+    height: 55px;
+
+    bottom: 20%;
+    left: 19%;
+
+    background: black;
+}
+
+.rombo-5 {
+    width: 60px;
+    height: 60px;
+
+    bottom: 17%;
+    right: 30%;
+
+    background: #e4002b;
+}
+
+.rombo-6 {
+    width: 42px;
+    height: 42px;
+
+    top: 13%;
+    right: 34%;
+
+    background: #e4002b;
+}
+
+.rombo-7 {
+    width: 45px;
+    height: 45px;
+
+    bottom: 29%;
+    right: 11%;
+
+    background: black;
+}
+
+
+/* ============================= */
+/* PUNTOS */
+/* ============================= */
+
+.dots {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 120px;
+    height: 120px;
+
+    background-image: radial-gradient(
+        black 3px,
+        transparent 3px
+    );
+
+    background-size: 22px 22px;
+}
+
+.dots-1 {
+    top: 35px;
+    right: 35px;
+}
+
+.dots-2 {
+    bottom: 25px;
+    left: 35px;
+}
+
+.dots-3 {
+    bottom: 25%;
+    right: 40px;
+}
+
+
+/* ============================= */
+/* LÍNEAS DEL FONDO */
+/* ============================= */
+
+.linea {
+    position: absolute;
+
+    z-index: 1;
+
+    height: 4px;
+
+    background: #e5e5e5;
+
+    transform: rotate(-45deg);
+}
+
+.linea-1 {
+    width: 1100px;
+
+    top: 27%;
+    left: -350px;
+}
+
+.linea-2 {
+    width: 1100px;
+
+    bottom: 25%;
+    right: -350px;
+}
+
+
+/* ============================= */
+/* DECORACIÓN */
+/* ============================= */
+
+.decoracion {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 2px solid #eeeeee;
+
+    transform: rotate(45deg);
+
+    z-index: 1;
+}
+
+.decoracion-1 {
+    top: 5%;
+    left: 15%;
+}
+
+.decoracion-2 {
+    bottom: 3%;
+    right: 15%;
+}
+
+
+/* ============================= */
+/* CUADRADOS PEQUEÑOS */
+/* ============================= */
+
+.mini {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    transform: rotate(45deg);
+
+    z-index: 5;
+}
+
+.mini-1 {
+    top: 20%;
+    left: 33%;
+
+    background: #e4002b;
+}
+
+.mini-2 {
+    top: 24%;
+    right: 30%;
+
+    background: black;
+}
+
+.mini-3 {
+    bottom: 22%;
+    left: 25%;
+
+    background: #e4002b;
+}
+
+.mini-4 {
+    bottom: 28%;
+    right: 31%;
+
+    background: black;
+}
+
+.mini-1::after,
+.mini-2::after,
+.mini-3::after,
+.mini-4::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background: white;
+
+    top: 7px;
+    left: 7px;
+}
+
+
+/* ============================= */
+/* RAYAS */
+/* ============================= */
+
+.rayas {
+    position: absolute;
+
+    width: 200px;
+    height: 35px;
+
+    z-index: 3;
+
+    border-top: 3px solid #e4002b;
+    border-bottom: 3px solid black;
+
+    transform: rotate(-45deg);
+}
+
+.rayas-1 {
+    top: 35%;
+    left: -45px;
+}
+
+.rayas-2 {
+    bottom: 32%;
+    right: -45px;
+}
+
+
+/* ============================= */
+/* PUNTOS EXTRA */
+/* ============================= */
+
+#presentacion::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    top: 18%;
+    right: 12%;
+
+    background-image: radial-gradient(
+        black 2px,
+        transparent 2px
+    );
+
+    background-size: 18px 18px;
+
+    z-index: 2;
+}
+
+#presentacion::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    bottom: 12%;
+    left: 12%;
+
+    background-image: radial-gradient(
+        black 2px,
+        transparent 2px
+    );
+
+    background-size: 18px 18px;
+
+    z-index: 2;
+}
+
+
+/* ============================= */
+/* PÁGINA PRINCIPAL */
+/* ============================= */
+
+#principal {
+    display: none;
+}
+
+
+/* ================================================= */
+/* ADAPTACIÓN PARA TABLETS Y PANTALLAS MEDIANAS */
+/* ================================================= */
+
+@media (max-width: 1200px) {
+
+    .contenido {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    h1 {
+        font-size: 150px;
+    }
+
+    .separador {
+        width: 80%;
+    }
+
+    .linea-roja {
+        width: 25%;
+    }
+}
+
+
+/* ================================================= */
+/* ADAPTACIÓN PARA CELULARES */
+/* ================================================= */
+
+@media (max-width: 700px) {
+
+    #presentacion {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+
+    /* Contenido */
+
+    .contenido {
+        width: 100%;
+        padding: 0 18px;
+
+        transform: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Logo */
+
+    .logo {
+        width: 100px;
+        height: 82px;
+
+        margin: 0 auto 5px;
+
+        transform: scale(0.72);
+        transform-origin: center;
+    }
+
+
+    .pan {
+        width: 115px;
+        height: 55px;
+        left: -7px;
+    }
+
+    .carne {
+        width: 115px;
+        left: -7px;
+    }
+
+    .queso {
+        width: 115px;
+        left: -7px;
+    }
+
+    .pan-abajo {
+        width: 115px;
+        left: -7px;
+    }
+
+
+    /* Nombre */
+
+    h1 {
+        font-size: clamp(76px, 22vw, 105px);
+
+        line-height: 0.82;
+
+        letter-spacing: 1px;
+
+        width: 100%;
+    }
+
+
+    /* Separador */
+
+    .separador {
+        width: 100%;
+
+        margin: 22px auto 15px;
+
+        gap: 8px;
+    }
+
+
+    .linea-roja {
+        width: 25%;
+
+        height: 4px;
+    }
+
+
+    .estrellas {
+        font-size: 25px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* Eslogan */
+
+    .contenido p {
+        font-size: 14px;
+
+        letter-spacing: 3px;
+
+        color: white;
+
+        margin-top: 0;
+
+        text-shadow:
+            0 1px 2px black,
+            0 0 3px black;
+    }
+
+
+    /* Botón */
+
+    #btnEntrar {
+        width: min(280px, 78vw);
+
+        height: 60px;
+
+        margin-top: 24px;
+
+        border: 4px solid #e4002b;
+
+        font-size: 24px;
+
+        box-shadow: 6px 6px 0 #e4002b;
+    }
+}
+
+
+/* ================================================= */
+/* CELULARES PEQUEÑOS */
+/* ================================================= */
+
+@media (max-width: 370px) {
+
+    .contenido {
+        padding: 0 12px;
+    }
+
+
+    .logo {
+        transform: scale(0.62);
+
+        margin-bottom: 0;
+    }
+
+
+    h1 {
+        font-size: 72px;
+
+        line-height: 0.82;
+    }
+
+
+    .separador {
+        margin-top: 18px;
+        margin-bottom: 12px;
+    }
+
+
+    .estrellas {
+        font-size: 21px;
+    }
+
+
+    .contenido p {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+
+    #btnEntrar {
+        width: 250px;
+
+        height: 55px;
+
+        margin-top: 20px;
+
+        font-size: 21px;
+    }
+}
